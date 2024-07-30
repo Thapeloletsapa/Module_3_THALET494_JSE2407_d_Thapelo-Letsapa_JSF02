@@ -6,6 +6,8 @@
     <img src={product.image} alt={product.title} class="product-image" />
     <h2 class="product-title">{product.title}</h2>
     <p class="product-price">${product.price}</p>
+    <p>Category: {product.category}</p>
+  <a href={`/products/${product.id}`}>View Details</a>
     <button class="add-to-cart">Add to Cart</button>
   </div>
   
@@ -53,3 +55,4 @@
       background-color: #2980b9;
 }
 </style>
+
