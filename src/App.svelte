@@ -1,13 +1,19 @@
 <script>
- import Header from "./components/Header.svelte"
- import ProductList from "./components/ProductList.svelte";
-</script>
+// @ts-nocheck
 
-<main>
-<Header />
-<ProductList />
-</main>
+    import Header from "./components/Header.svelte";
+    import ProductList from "./components/ProductList.svelte";
+  </script>
+  
+  <main >
+    <Header />
+    <ProductList />
+  </main>
 
-<style>
- 
-</style>
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  </style>
