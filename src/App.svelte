@@ -16,9 +16,15 @@
       const updateFilters = (newFilters) => {
         filters.update(current => ({ ...current, ...newFilters }));
       };
+    
+      let isMenuOpen = false;
+    
+      const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+      };
     </script>
     
-    <Header />
+    <Header {isMenuOpen} {toggleMenu} />
     
     <Router>
       <Route path="/">

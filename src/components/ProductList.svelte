@@ -32,17 +32,17 @@
 
   const updateDisplayedProducts = () => {
     let filteredProducts = products;
-    if (filters.category !== 'All categories') {
-      filteredProducts = filteredProducts.filter(product => product.category === filters.category);
+    if ($filters.category !== 'All categories') {
+      filteredProducts = filteredProducts.filter(product => product.category === $filters.category);
     }
-    if (filters.searchTerm) {
+    if ($filters.searchTerm) {
       filteredProducts = filteredProducts.filter(product => 
-        product.title.toLowerCase().includes(filters.searchTerm.toLowerCase())
+        product.title.toLowerCase().includes($filters.searchTerm.toLowerCase())
       );
     }
-    if (filters.sorting === 'low') {
+    if ($filters.sorting === 'low') {
       filteredProducts.sort((a, b) => a.price - b.price);
-    } else if (filters.sorting === 'high') {
+    } else if ($filters.sorting === 'high') {
       filteredProducts.sort((a, b) => b.price - a.price);
     }
     displayedProducts = filteredProducts;
@@ -56,15 +56,15 @@
 </script>
 
 <div class="controls">
-  <select bind:value={filters.sorting} on:change={() => updateFilters({ sorting: filters.sorting })} class="p-2 border rounded">
+  <select bind:value={$filters.sorting} on:change={() => updateFilters({ sorting: $filters.sorting })} class="p-2 border rounded">
     <option value="default">Default</option>
     <option value="low">Price: Low to High</option>
     <option value="high">Price: High to Low</option>
   </select>
 
-  <input type="text" bind:value={filters.searchTerm} on:input={() => updateFilters({ searchTerm: filters.searchTerm })} placeholder="Search products..." class="p-2 border rounded">
+  <input type="text" bind:value={$filters.searchTerm} on:input={() => updateFilters({ searchTerm: $filters.searchTerm })} placeholder="Search products..." class="p-2 border rounded">
 
-  <select bind:value={filters.category} on:change={() => updateFilters({ category: filters.category })} class="p-2 border rounded">
+  <select bind:value={$filters.category} on:change={() => updateFilters({ category: $filters.category })} class="p-2 border rounded">
     <option value="All categories">All categories</option>
     {#each categories as category}
       <option value={category}>{category}</option>
