@@ -8,7 +8,7 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="/">
         <button type="button" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="../assets/Shopify_E-commerce_Logo_Web_Design_PNG_-_Free_Download-removebg-preview.png" class="h-8" alt="Flowbite Logo" />
+          <img src="src/assets/Shopify_E-commerce_Logo_Web_Design_PNG_-_Free_Download-removebg-preview.png" class="h-8" alt="Shopify logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
             SwiftCart
           </span>
